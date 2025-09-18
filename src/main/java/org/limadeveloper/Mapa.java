@@ -1,5 +1,9 @@
 package org.limadeveloper;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Mapa {
     private char[][] matriz;
     private int numeroLinhas;
@@ -26,6 +30,12 @@ public class Mapa {
     }
 
     public void lerArquivo(String nomeArquivo){
-
+        try (Scanner scanner = new Scanner(new File(nomeArquivo))) {
+            while (scanner.hasNext()) {
+                System.out.println(scanner.next()); // Reads token by token
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("Mapa não encontrada " + e.getMessage());
+        }
     }
 }
