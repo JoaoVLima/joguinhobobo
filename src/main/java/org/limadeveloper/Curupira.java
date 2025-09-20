@@ -6,7 +6,12 @@ public class Curupira extends Entidade implements Monstro {
     }
 
     @Override
-    public void aplicarHabilidade() {}
+    public void aplicarHabilidade() {
+        System.out.println("🌲 Curupira confunde o herói e o faz perder o caminho!");
+    }
+
     @Override
-    public String getDescricao() { return "Curupira"; }
+    public String getDescricao() {
+        return "Curupira";
+    }
 }

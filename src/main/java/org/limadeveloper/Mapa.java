@@ -18,7 +18,12 @@ public class Mapa {
     }
 
     public void imprimeMapa(int x, int y) {
-
+        for (int i = 0; i < numeroLinhas; i++) {
+            for (int j = 0; j < numeroColunas; j++) {
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     public boolean encontraSaida(int x, int y) {
@@ -29,13 +34,18 @@ public class Mapa {
         matriz = new char[numeroLinhas][numeroColunas];
     }
 
-    public void lerArquivo(String nomeArquivo){
-        try (Scanner scanner = new Scanner(new File(nomeArquivo))) {
-            while (scanner.hasNext()) {
-                System.out.println(scanner.next()); // Reads token by token
+    public void lerArquivo(String nomeArquivo) {
+        try (Scanner scanner = new Scanner(getClass().getClassLoader().getResourceAsStream(nomeArquivo))) {
+            int linha = 0;
+            while (scanner.hasNextLine() && linha < numeroLinhas) {
+                String linhaTexto = scanner.nextLine();
+                for (int col = 0; col < numeroColunas && col < linhaTexto.length(); col++) {
+                    matriz[linha][col] = linhaTexto.charAt(col);
+                }
+                linha++;
             }
-        } catch (FileNotFoundException e) {
-            System.err.println("Mapa não encontrada " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Mapa não encontrado: " + e.getMessage());
         }
     }
 }

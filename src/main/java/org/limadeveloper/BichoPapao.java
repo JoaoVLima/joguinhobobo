@@ -6,7 +6,10 @@ public class BichoPapao extends Entidade implements Monstro {
     }
 
     @Override
-    public void aplicarHabilidade() {}
+    public void aplicarHabilidade() {
+        System.out.println("👹 Bicho Papão assusta o herói e reduz sua coragem!");
+    }
+
     @Override
     public String getDescricao() {
         return "Bicho Papão";
