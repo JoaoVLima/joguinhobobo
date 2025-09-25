@@ -17,7 +17,7 @@ public class Mapa {
         lerArquivo(nomeArquivo);
     }
 
-    public void imprimeMapa(int x, int y) {
+    public void imprimeMapa() {
         for (int i = 0; i < numeroLinhas; i++) {
             for (int j = 0; j < numeroColunas; j++) {
                 System.out.print(matriz[i][j]);
