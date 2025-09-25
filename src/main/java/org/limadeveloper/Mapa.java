@@ -43,6 +43,7 @@ public class Mapa {
                 String linhaTexto = scanner.nextLine(); // armazena a linha em uma string
                 // percore pelos caracteres da string
                 for (int coluna = 0; coluna < numeroColunas && coluna < linhaTexto.length(); coluna++) {
+                    // insere na matrix usando a funcao charAt() na linha
                     matriz[linha][coluna] = linhaTexto.charAt(coluna);
                 }
                 linha++;
