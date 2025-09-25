@@ -17,6 +17,10 @@ public class Mapa {
         lerArquivo(nomeArquivo);
     }
 
+    public void setHeroi(Heroi heroi){
+        this.heroi = heroi;
+    }
+
     public void imprimeMapa() {
         for (int i = 0; i < numeroLinhas; i++) {
             for (int j = 0; j < numeroColunas; j++) {
@@ -36,6 +40,7 @@ public class Mapa {
         switch (matriz[y][x]) {
             case '?': // Bicho Papão
                 BichoPapao bichoPapao = new BichoPapao(10,10,10);
+                bichoPapao.batalha(heroi);
                 // batalha
             case '*': // Curupira
                 Curupira curupira = new Curupira(10,10,10);
