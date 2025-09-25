@@ -35,12 +35,15 @@ public class Mapa {
     }
 
     public void lerArquivo(String nomeArquivo) {
+        // Scanner para ler o arquivo
         try (Scanner scanner = new Scanner(getClass().getClassLoader().getResourceAsStream(nomeArquivo))) {
-            int linha = 0;
+            int linha = 0; // y
+            // verifica se tem a proxima linha
             while (scanner.hasNextLine() && linha < numeroLinhas) {
-                String linhaTexto = scanner.nextLine();
-                for (int col = 0; col < numeroColunas && col < linhaTexto.length(); col++) {
-                    matriz[linha][col] = linhaTexto.charAt(col);
+                String linhaTexto = scanner.nextLine(); // armazena a linha em uma string
+                // percore pelos caracteres da string
+                for (int coluna = 0; coluna < numeroColunas && coluna < linhaTexto.length(); coluna++) {
+                    matriz[linha][coluna] = linhaTexto.charAt(coluna);
                 }
                 linha++;
             }
