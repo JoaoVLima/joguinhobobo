@@ -6,7 +6,9 @@ public class Cura extends Item {
     }
 
     @Override
-    public void aplicaBonusHeroi(Heroi heroi) {}
+    public void aplicaBonusHeroi(Heroi heroi) {
+        heroi.setVida(heroi.getVida() + getBonus());
+    }
     @Override
     public void retiraBonusHeroi(Heroi heroi) {}
     @Override

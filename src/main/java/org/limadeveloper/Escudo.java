@@ -6,7 +6,9 @@ public class Escudo extends Item {
     }
 
     @Override
-    public void aplicaBonusHeroi(Heroi heroi) {}
+    public void aplicaBonusHeroi(Heroi heroi) {
+        heroi.setDefesa(heroi.getDefesa() + getBonus());
+    }
     @Override
     public void retiraBonusHeroi(Heroi heroi) {}
     @Override

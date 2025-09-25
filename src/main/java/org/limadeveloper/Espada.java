@@ -6,7 +6,9 @@ public class Espada extends Item {
     }
 
     @Override
-    public void aplicaBonusHeroi(Heroi heroi) {}
+    public void aplicaBonusHeroi(Heroi heroi) {
+        heroi.setAtaque(heroi.getAtaque() + getBonus());
+    }
     @Override
     public void retiraBonusHeroi(Heroi heroi) {}
     @Override
