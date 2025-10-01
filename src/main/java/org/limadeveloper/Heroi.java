@@ -8,14 +8,14 @@ public class Heroi extends Entidade {
     }
 
     public void receberAjudante(Ajudante ajudante) {
-        System.out.println("🤝 " + ajudante.getNome() + " apareceu: " + ajudante.getDescricao());
+        System.out.println(ajudante.getNome() + " apareceu: " + ajudante.getDescricao());
         this.ajudante = ajudante;
     }
 
     public void aplicarAjudante(Monstro monstro) {
         if (ajudante != null) {
             ajudante.aplicarEfeito(this, monstro);
-            System.out.println("❌ " + ajudante.getNome() + " foi embora.");
+            System.out.println(ajudante.getNome() + " foi embora.");
             ajudante = null;
         }
     }

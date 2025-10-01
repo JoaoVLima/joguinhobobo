@@ -13,7 +13,7 @@ public class Duende implements Ajudante {
     public void aplicarEfeito(Heroi heroi, Monstro monstro) {
         heroi.setVida((int) (heroi.getVida() * 0.9));
         monstro.setVida((int) (monstro.getVida() * 0.5));
-        System.out.println("🧝 O Duende ajudou! Vida do herói agora: " + heroi.getVida());
-        System.out.println("➡️ Vida do monstro reduzida: " + monstro.getVida());
+        System.out.println("O Duende ajudou! Vida do herói agora: " + heroi.getVida());
+        System.out.println("Vida do monstro reduzida: " + monstro.getVida());
     }
 }

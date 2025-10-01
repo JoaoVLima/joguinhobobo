@@ -7,18 +7,18 @@ public interface Monstro {
 
         while (heroi.estaVivo() && getVida() > 0) {
             setVida(getVida() - Math.max(0, heroi.getAtaque() - getDefesa()));
-            System.out.println("➡️ Herói ataca! Vida do " + getDescricao() + ": " + getVida());
+            System.out.println("Herói ataca! Vida do " + getDescricao() + ": " + getVida());
 
             if (getVida() <= 0) break;
 
             heroi.setVida(heroi.getVida() - Math.max(0, getAtaque() - heroi.getDefesa()));
-            System.out.println("⬅️ " + getDescricao() + " ataca! Vida do herói: " + heroi.getVida());
+            System.out.println(getDescricao() + " ataca! Vida do herói: " + heroi.getVida());
         }
 
         if (!heroi.estaVivo()) {
-            System.out.println("💀 O herói morreu...");
+            System.out.println("O herói morreu...");
         } else {
-            System.out.println("✅ O herói derrotou " + getDescricao());
+            System.out.println("O herói derrotou " + getDescricao());
         }
     }
 
