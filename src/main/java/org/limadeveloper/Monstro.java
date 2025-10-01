@@ -2,7 +2,7 @@ package org.limadeveloper;
 
 public interface Monstro {
     default void batalha(Heroi heroi) {
-        System.out.println("⚔️ Iniciando batalha contra " + getDescricao());
+        System.out.println("Iniciando batalha contra " + getDescricao());
         aplicarHabilidade();
 
         while (heroi.estaVivo() && getVida() > 0) {
