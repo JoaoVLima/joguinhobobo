@@ -8,6 +8,8 @@ public class Curupira extends Entidade implements Monstro {
     @Override
     public void aplicarHabilidade() {
         System.out.println("Curupira confunde o herói e o faz perder o caminho!");
+        System.out.println("Curupira ganha mais 10% de defesa.");
+        setDefesa((int) (getDefesa()*1.10));
     }
 
     @Override
