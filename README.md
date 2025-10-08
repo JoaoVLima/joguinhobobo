@@ -4,9 +4,8 @@ joguinho bobo usa as melhores teorias de classes, solid e outras
 ```
 mvn compile exec:java
 ```
-
-[RUN_RECORDED.mp4](2025-10-08%2018-58-42.mp4)
-
+[RUN_RECORDED](2025-10-08%2018-58-42.mp4)
+![output.gif](output.gif)
 ![diagrama.png](diagrama.png)
 
 ```
