@@ -1,5 +1,6 @@
 package org.limadeveloper;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Mapa {
@@ -28,21 +29,32 @@ public class Mapa {
         }
     }
 
-    public boolean encontraSaida(int x, int y) {
+    public void limparConsole() throws IOException, InterruptedException {
+        new ProcessBuilder("clear").inheritIO().start().waitFor();  // FUNCIONOU, NAO MEXE MAIS (ou faz varios ifs pra varias condicoes de OS, etc)
+    }
+
+    public boolean encontraSaida(int x, int y) throws IOException, InterruptedException {
+        imprimeMapa();
+        Thread.sleep(100);
+        limparConsole();
         if (matriz[y][x] == '=') {
             imprimeMapa();
+            System.out.println("FIM DO JOGO, OBRIGADO POR JOGAR!!!");
             return true;
         }
 
 
         switch (matriz[y][x]) {
             case '?': // Bicho Papão
-                BichoPapao bichoPapao = new BichoPapao(10,10,10);
+                BichoPapao bichoPapao = new BichoPapao(7,6,40);
+                heroi.aplicarAjudante(bichoPapao);
                 bichoPapao.batalha(heroi);
                 break;
                 // batalha
             case '*': // Curupira
-                Curupira curupira = new Curupira(10,10,10);
+                Curupira curupira = new Curupira(6,10,30);
+                heroi.aplicarAjudante(curupira);
+                curupira.batalha(heroi);
                 break;
                 // batalha
             case '^': // Duende
@@ -70,6 +82,11 @@ public class Mapa {
                 Cura cura = new Cura();
                 cura.aplicaBonusHeroi(heroi);
                 break;
+        }
+
+        if (!heroi.estaVivo()){
+            imprimeMapa();
+            return true;
         }
 
         // direita

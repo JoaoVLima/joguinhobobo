@@ -17,7 +17,7 @@ public class Heroi extends Entidade {
         // Read the entire line of input as a string
         String option = scanner.nextLine();
         // Close the scanner
-        scanner.close();
+        // scanner.close();
 
         if  (option.equals("s")) {
             this.ajudante = ajudante;
