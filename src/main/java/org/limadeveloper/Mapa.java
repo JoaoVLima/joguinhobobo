@@ -39,30 +39,37 @@ public class Mapa {
             case '?': // Bicho Papão
                 BichoPapao bichoPapao = new BichoPapao(10,10,10);
                 bichoPapao.batalha(heroi);
+                break;
                 // batalha
             case '*': // Curupira
                 Curupira curupira = new Curupira(10,10,10);
+                break;
                 // batalha
             case '^': // Duende
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
                 Duende duende = new Duende();
                 heroi.receberAjudante(duende);
+                break;
             case '&': // Anão
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
                 Anao anao = new Anao();
                 heroi.receberAjudante(anao);
+                break;
             case 'e': // Espada
                 // recebe buff de ataque
                 Espada espada = new Espada();
                 espada.aplicaBonusHeroi(heroi);
+                break;
             case 'd': // Escudo
                 // recebe buff de defesa
                 Escudo escudo = new Escudo();
                 escudo.aplicaBonusHeroi(heroi);
+                break;
             case 'c': // Cura
                 // recebe buff de vida
                 Cura cura = new Cura();
                 cura.aplicaBonusHeroi(heroi);
+                break;
         }
 
         // direita
