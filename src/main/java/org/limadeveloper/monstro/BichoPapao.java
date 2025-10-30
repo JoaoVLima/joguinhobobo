@@ -1,4 +1,6 @@
-package org.limadeveloper;
+package org.limadeveloper.monstro;
+
+import org.limadeveloper.Entidade;
 
 public class BichoPapao extends Entidade implements Monstro {
     public BichoPapao(int ataque, int defesa, int vida) {

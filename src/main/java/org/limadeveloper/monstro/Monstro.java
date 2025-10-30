@@ -1,4 +1,6 @@
-package org.limadeveloper;
+package org.limadeveloper.monstro;
+
+import org.limadeveloper.Heroi;
 
 import java.util.Random;
 

@@ -1,4 +1,6 @@
-package org.limadeveloper;
+package org.limadeveloper.monstro;
+
+import org.limadeveloper.Entidade;
 
 public class Curupira extends Entidade implements Monstro {
     public Curupira(int ataque, int defesa, int vida) {

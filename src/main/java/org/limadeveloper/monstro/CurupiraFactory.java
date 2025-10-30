@@ -1,4 +1,4 @@
-package org.limadeveloper;
+package org.limadeveloper.monstro;
 
 public class CurupiraFactory extends MonstroFactory{
 
