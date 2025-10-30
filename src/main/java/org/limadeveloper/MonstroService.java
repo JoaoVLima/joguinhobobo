@@ -1,13 +1,13 @@
 package org.limadeveloper;
 
 public class MonstroService {
-    private final MonstroFactory fatory;
+    private final MonstroFactory factory;
 
-    public MonstroService(MonstroFactory fatory) {
-        this.fatory = fatory;
+    public MonstroService(MonstroFactory factory) {
+        this.factory = factory;
     }
 
     public void batalhaService(Heroi heroi) throws InterruptedException {
-        this.fatory.batalhaFactory(heroi);
+        this.factory.batalhaFactory(heroi);
     }
 }
