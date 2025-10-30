@@ -43,18 +43,17 @@ public class Mapa {
             return true;
         }
 
-
         switch (matriz[y][x]) {
             case '?': // Bicho Papão
-                BichoPapao bichoPapao = new BichoPapao(7,6,40);
-                heroi.aplicarAjudante(bichoPapao);
-                bichoPapao.batalha(heroi);
+                BichoPapaoFactory bichoPapaoFactory = new BichoPapaoFactory();
+                MonstroService bichoPapaoMonstroService = new MonstroService(bichoPapaoFactory);
+                bichoPapaoMonstroService.batalhaService(heroi);
                 break;
                 // batalha
             case '*': // Curupira
-                Curupira curupira = new Curupira(6,10,30);
-                heroi.aplicarAjudante(curupira);
-                curupira.batalha(heroi);
+                CurupiraFactory curupiraFactory = new CurupiraFactory();
+                MonstroService curupiraMonstroService = new MonstroService(curupiraFactory);
+                curupiraMonstroService.batalhaService(heroi);
                 break;
                 // batalha
             case '^': // Duende
