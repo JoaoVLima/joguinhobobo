@@ -1,6 +1,6 @@
-package org.limadeveloper.monstro;
+package joguinhobobo.monstro;
 
-import org.limadeveloper.Heroi;
+import joguinhobobo.Heroi;
 
 import java.util.Random;
 

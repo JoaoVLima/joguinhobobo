@@ -1,4 +1,7 @@
-package org.limadeveloper;
+package joguinhobobo;
+
+import joguinhobobo.ajudante.Ajudante;
+import joguinhobobo.monstro.Monstro;
 
 public class Anao implements Ajudante {
     @Override

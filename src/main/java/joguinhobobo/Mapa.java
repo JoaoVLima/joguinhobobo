@@ -1,4 +1,8 @@
-package org.limadeveloper;
+package joguinhobobo;
+
+import joguinhobobo.monstro.BichoPapaoFactory;
+import joguinhobobo.monstro.CurupiraFactory;
+import joguinhobobo.monstro.MonstroService;
 
 import java.io.IOException;
 import java.util.Scanner;

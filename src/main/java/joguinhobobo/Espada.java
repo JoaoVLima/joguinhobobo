@@ -1,4 +1,4 @@
-package org.limadeveloper;
+package joguinhobobo;
 
 public class Espada extends Item {
     public Espada() {

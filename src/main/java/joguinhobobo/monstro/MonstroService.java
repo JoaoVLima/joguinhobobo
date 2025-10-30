@@ -1,6 +1,6 @@
-package org.limadeveloper.monstro;
+package joguinhobobo.monstro;
 
-import org.limadeveloper.Heroi;
+import joguinhobobo.Heroi;
 
 public class MonstroService {
     private final MonstroFactory factory;

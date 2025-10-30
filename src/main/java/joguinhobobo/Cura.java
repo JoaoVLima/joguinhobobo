@@ -1,4 +1,4 @@
-package org.limadeveloper;
+package joguinhobobo;
 
 public class Cura extends Item {
     public Cura() {

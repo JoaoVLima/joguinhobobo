@@ -1,4 +1,4 @@
-package org.limadeveloper;
+package joguinhobobo;
 
 public enum EnumBonusItem {
     BONUS_ESPADA(10),

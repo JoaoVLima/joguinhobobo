@@ -1,4 +1,4 @@
-package org.limadeveloper.monstro;
+package joguinhobobo.monstro;
 
 public class BichoPapaoFactory extends MonstroFactory{
 

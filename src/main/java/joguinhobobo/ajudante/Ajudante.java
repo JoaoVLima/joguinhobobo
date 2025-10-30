@@ -1,4 +1,7 @@
-package org.limadeveloper;
+package joguinhobobo.ajudante;
+
+import joguinhobobo.Heroi;
+import joguinhobobo.monstro.Monstro;
 
 public interface Ajudante {
     String getNome();

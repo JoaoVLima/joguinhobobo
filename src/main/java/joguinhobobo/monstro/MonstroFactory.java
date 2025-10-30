@@ -1,6 +1,6 @@
-package org.limadeveloper.monstro;
+package joguinhobobo.monstro;
 
-import org.limadeveloper.Heroi;
+import joguinhobobo.Heroi;
 
 public abstract class MonstroFactory {
     public void batalhaFactory(Heroi heroi) throws InterruptedException {

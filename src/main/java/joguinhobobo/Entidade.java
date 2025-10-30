@@ -1,4 +1,4 @@
-package org.limadeveloper;
+package joguinhobobo;
 
 public class Entidade {
     protected int ataque;
