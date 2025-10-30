@@ -9,6 +9,8 @@ public class Heroi extends Entidade {
         super(ataque, defesa, vida);
     }
 
+    // Todo: mao esquerda e mao direita, salvar as armas e escudos
+
     public void receberAjudante(Ajudante ajudante) {
         System.out.println(ajudante.getNome() + " apareceu: " + ajudante.getDescricao() + "Aceita? (s ou n)");
         // Create a Scanner object to read input
