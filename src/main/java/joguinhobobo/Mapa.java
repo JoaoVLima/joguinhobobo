@@ -165,6 +165,8 @@ public class Mapa {
                                 new Char(caracter, Cor.BLUE);
                         case 'c' -> // Cura
                                 new Char(caracter, Cor.GREEN);
+                        case '=' -> // Fim
+                                new Char(caracter, Cor.GREEN);
                         default -> new Char(caracter, Cor.WHITE);
                     };
                     matriz[linha][coluna] = caracter_colorido;
