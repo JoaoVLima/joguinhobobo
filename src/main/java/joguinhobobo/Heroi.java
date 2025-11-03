@@ -1,12 +1,13 @@
 package joguinhobobo;
 
 import joguinhobobo.ajudante.Ajudante;
+import joguinhobobo.ajudante.AjudanteService;
 import joguinhobobo.monstro.Monstro;
 
 import java.util.Scanner;
 
 public class Heroi extends Entidade {
-    private Ajudante ajudante;
+    private AjudanteService ajudante;
 
     public Heroi(int ataque, int defesa, int vida) {
         super(ataque, defesa, vida);
@@ -14,8 +15,8 @@ public class Heroi extends Entidade {
 
     // Todo: mao esquerda e mao direita, salvar as armas e escudos
 
-    public void receberAjudante(Ajudante ajudante) {
-        System.out.println(ajudante.getNome() + " apareceu: " + ajudante.getDescricao() + "Aceita? (s ou n)");
+    public void receberAjudante(AjudanteService ajudante) {
+        System.out.println(ajudante.getNomeService() + " apareceu: " + ajudante.getDescricaoService() + "Aceita? (s ou n)");
         // Create a Scanner object to read input
         Scanner scanner = new Scanner(System.in);
 
@@ -30,10 +31,10 @@ public class Heroi extends Entidade {
 
     }
 
-    public void aplicarAjudante(Monstro monstro) {
+    public void aplicarAjudante(Monstro monstro) throws InterruptedException {
         if (ajudante != null) {
-            ajudante.aplicarEfeito(this, monstro);
-            System.out.println(ajudante.getNome() + " foi embora.");
+            ajudante.aplicarEfeitoService(this, monstro);
+            System.out.println(ajudante.getNomeService() + " foi embora.");
             ajudante = null;
         }
     }

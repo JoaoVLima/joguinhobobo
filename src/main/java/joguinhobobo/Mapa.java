@@ -1,5 +1,6 @@
 package joguinhobobo;
 
+import joguinhobobo.ajudante.*;
 import joguinhobobo.monstro.BichoPapaoFactory;
 import joguinhobobo.monstro.CurupiraFactory;
 import joguinhobobo.monstro.MonstroService;
@@ -62,13 +63,15 @@ public class Mapa {
                 // batalha
             case '^': // Duende
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
-                Duende duende = new Duende();
-                heroi.receberAjudante(duende);
+                DuendeFactory duendeFactory = new DuendeFactory();
+                AjudanteService duendeAjudanteService = new AjudanteService(duendeFactory);
+                heroi.receberAjudante(duendeAjudanteService);
                 break;
             case '&': // Anão
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
-                Anao anao = new Anao();
-                heroi.receberAjudante(anao);
+                AnaoFactory anaoFactory = new AnaoFactory();
+                AjudanteService anaoAjudanteService = new AjudanteService(anaoFactory);
+                heroi.receberAjudante(anaoAjudanteService);
                 break;
             case 'e': // Espada
                 // recebe buff de ataque

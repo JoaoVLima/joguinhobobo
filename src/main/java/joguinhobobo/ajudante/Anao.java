@@ -1,6 +1,6 @@
-package joguinhobobo;
+package joguinhobobo.ajudante;
 
-import joguinhobobo.ajudante.Ajudante;
+import joguinhobobo.Heroi;
 import joguinhobobo.monstro.Monstro;
 
 public class Anao implements Ajudante {
