@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Mapa {
-    private char[][] matriz;
-    private int numeroLinhas;
-    private int numeroColunas;
+    private Char[][] matriz;
+    private final int numeroLinhas;
+    private final int numeroColunas;
     private Heroi heroi;
 
     public Mapa(String nomeArquivo, int linhas, int colunas) {
@@ -42,13 +42,13 @@ public class Mapa {
         imprimeMapa();
         Thread.sleep(100);
         limparConsole();
-        if (matriz[y][x] == '=') {
+        if (matriz[y][x].getChar() == '=') {
             imprimeMapa();
             System.out.println("FIM DO JOGO, OBRIGADO POR JOGAR!!!");
             return true;
         }
 
-        switch (matriz[y][x]) {
+        switch (matriz[y][x].getChar()) {
             case '?': // Bicho Papão
                 BichoPapaoFactory bichoPapaoFactory = new BichoPapaoFactory();
                 MonstroService bichoPapaoMonstroService = new MonstroService(bichoPapaoFactory);
@@ -100,31 +100,31 @@ public class Mapa {
         // esquerda
         // cima
 
-        char direita = matriz[y][x+1];
-        char baixo = matriz[y+1][x];
-        char esquerda = matriz[y][x-1];
-        char cima = matriz[y-1][x];
+        char direita = matriz[y][x+1].getChar();
+        char baixo = matriz[y+1][x].getChar();
+        char esquerda = matriz[y][x-1].getChar();
+        char cima = matriz[y-1][x].getChar();
 
         if (direita != '#' && direita != '8') {
             // direita ta livre
-            matriz[y][x] = '8';
+            matriz[y][x] = new Char('8', Cor.YELLOW);
             return encontraSaida(x+1, y);
         }
         if  (baixo != '#' && baixo != '8') {
             // baixo ta livre
-            matriz[y][x] = '8';
+            matriz[y][x] = new Char('8', Cor.YELLOW);
             return encontraSaida(x, y+1);
 
         }
         if (esquerda != '#' && esquerda != '8') {
             // esquerda ta livre
-            matriz[y][x] = '8';
+            matriz[y][x] = new Char('8', Cor.YELLOW);
             return encontraSaida(x-1, y);
 
         }
         if (cima != '#' && cima != '8') {
             // cima ta livre
-            matriz[y][x] = '8';
+            matriz[y][x] = new Char('8', Cor.YELLOW);
             return encontraSaida(x, y-1);
 
         }
@@ -136,7 +136,7 @@ public class Mapa {
 
 
     private void alocaMatriz() {
-        matriz = new char[numeroLinhas][numeroColunas];
+        matriz = new Char[numeroLinhas][numeroColunas];
     }
 
     public void lerArquivo(String nomeArquivo) {
@@ -149,7 +149,25 @@ public class Mapa {
                 // percore pelos caracteres da string
                 for (int coluna = 0; coluna < numeroColunas && coluna < linhaTexto.length(); coluna++) {
                     // insere na matrix usando a funcao charAt() na linha
-                    matriz[linha][coluna] = linhaTexto.charAt(coluna);
+                    char caracter = linhaTexto.charAt(coluna);
+                    Char caracter_colorido = switch (caracter) {
+                        case '?' -> // Bicho Papão
+                                new Char(caracter, Cor.RED);
+                        case '*' -> // Curupira
+                                new Char(caracter, Cor.RED);
+                        case '^' -> // Duende
+                                new Char(caracter, Cor.YELLOW);
+                        case '&' -> // Anão
+                                new Char(caracter, Cor.YELLOW);
+                        case 'e' -> // Espada
+                                new Char(caracter, Cor.MAGENTA);
+                        case 'd' -> // Escudo
+                                new Char(caracter, Cor.BLUE);
+                        case 'c' -> // Cura
+                                new Char(caracter, Cor.GREEN);
+                        default -> new Char(caracter, Cor.WHITE);
+                    };
+                    matriz[linha][coluna] = caracter_colorido;
                 }
                 linha++;
             }
