@@ -7,6 +7,7 @@ public class Cura extends Item {
 
     @Override
     public void aplicaBonusHeroi(Heroi heroi) {
+        juntar(heroi);
         heroi.setVida(heroi.getVida() + getBonus());
     }
     @Override
@@ -15,6 +16,4 @@ public class Cura extends Item {
     public void imprimeDescricao() {}
     @Override
     public String getTipo() { return "Cura"; }
-    @Override
-    public void juntar(Heroi heroi) {}
 }

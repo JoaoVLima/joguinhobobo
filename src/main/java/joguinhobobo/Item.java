@@ -2,8 +2,6 @@ package joguinhobobo;
 
 public abstract class Item {
     protected EnumBonusItem bonus;
-    protected Item maoDireita;
-    protected Item maoEsquerda;
 
     public Item(EnumBonusItem bonus) {
         this.bonus = bonus;
@@ -17,22 +15,12 @@ public abstract class Item {
     public abstract void retiraBonusHeroi(Heroi heroi);
     public abstract void imprimeDescricao();
     public abstract String getTipo();
-    public abstract void juntar(Heroi heroi);
 
-    // Getters e setters para mãos
-    public void setMaoDireita(Item item) {
-        this.maoDireita = item;
+    public void juntar(Heroi heroi) {
+        heroi.pegarItem(this);
     }
 
-    public void setMaoEsquerda(Item item) {
-        this.maoEsquerda = item;
-    }
-
-    public Item getMaoDireita() {
-        return maoDireita;
-    }
-
-    public Item getMaoEsquerda() {
-        return maoEsquerda;
+    public String toString() {
+        return getTipo();
     }
 }

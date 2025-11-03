@@ -7,14 +7,16 @@ public class Escudo extends Item {
 
     @Override
     public void aplicaBonusHeroi(Heroi heroi) {
+        juntar(heroi);
         heroi.setDefesa(heroi.getDefesa() + getBonus());
     }
+
     @Override
     public void retiraBonusHeroi(Heroi heroi) {}
+
     @Override
     public void imprimeDescricao() {}
+
     @Override
     public String getTipo() { return "Escudo"; }
-    @Override
-    public void juntar(Heroi heroi) {}
 }

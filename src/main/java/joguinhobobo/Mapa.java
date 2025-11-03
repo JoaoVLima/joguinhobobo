@@ -1,5 +1,7 @@
 package joguinhobobo;
 
+import joguinhobobo.colorido.Char;
+import joguinhobobo.colorido.Cor;
 import joguinhobobo.ajudante.*;
 import joguinhobobo.monstro.BichoPapaoFactory;
 import joguinhobobo.monstro.CurupiraFactory;

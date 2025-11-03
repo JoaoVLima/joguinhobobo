@@ -1,4 +1,4 @@
-package joguinhobobo;
+package joguinhobobo.colorido;
 
 public enum Cor {
     RED("\u001B[31m"),

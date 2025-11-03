@@ -1,4 +1,4 @@
-package joguinhobobo;
+package joguinhobobo.colorido;
 
 public class Char{
     private final char caracter;
