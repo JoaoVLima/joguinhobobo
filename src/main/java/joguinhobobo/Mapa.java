@@ -107,24 +107,24 @@ public class Mapa {
 
         if (direita != '#' && direita != '8') {
             // direita ta livre
-            matriz[y][x] = new Char('8', Cor.YELLOW);
+            matriz[y][x] = new Char('8', Cor.CYAN);
             return encontraSaida(x+1, y);
         }
         if  (baixo != '#' && baixo != '8') {
             // baixo ta livre
-            matriz[y][x] = new Char('8', Cor.YELLOW);
+            matriz[y][x] = new Char('8', Cor.CYAN);
             return encontraSaida(x, y+1);
 
         }
         if (esquerda != '#' && esquerda != '8') {
             // esquerda ta livre
-            matriz[y][x] = new Char('8', Cor.YELLOW);
+            matriz[y][x] = new Char('8', Cor.CYAN);
             return encontraSaida(x-1, y);
 
         }
         if (cima != '#' && cima != '8') {
             // cima ta livre
-            matriz[y][x] = new Char('8', Cor.YELLOW);
+            matriz[y][x] = new Char('8', Cor.CYAN);
             return encontraSaida(x, y-1);
 
         }
