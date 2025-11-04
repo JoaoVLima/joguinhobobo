@@ -1,6 +1,6 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
-import joguinhobobo.Entidade;
+import joguinhobobo.entidade.Entidade;
 
 public class Curupira extends Entidade implements Monstro {
     public Curupira(int ataque, int defesa, int vida) {

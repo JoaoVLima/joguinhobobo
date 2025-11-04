@@ -1,4 +1,4 @@
-package joguinhobobo;
+package joguinhobobo.entidade;
 
 public class Entidade {
     protected int ataque;

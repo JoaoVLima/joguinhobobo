@@ -1,7 +1,7 @@
-package joguinhobobo.ajudante;
+package joguinhobobo.entidade.ajudante;
 
-import joguinhobobo.Heroi;
-import joguinhobobo.monstro.Monstro;
+import joguinhobobo.entidade.Heroi;
+import joguinhobobo.entidade.monstro.Monstro;
 
 public class AjudanteService {
     private final AjudanteFactory factory;

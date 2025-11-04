@@ -1,4 +1,6 @@
-package joguinhobobo;
+package joguinhobobo.item;
+
+import joguinhobobo.entidade.Heroi;
 
 public abstract class Item {
     protected EnumBonusItem bonus;

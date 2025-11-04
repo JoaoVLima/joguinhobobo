@@ -1,4 +1,4 @@
-package joguinhobobo;
+package joguinhobobo.item;
 
 public enum EnumBonusItem {
     BONUS_ESPADA(10),

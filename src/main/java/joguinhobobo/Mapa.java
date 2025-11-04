@@ -1,11 +1,12 @@
 package joguinhobobo;
 
-import joguinhobobo.colorido.Char;
-import joguinhobobo.colorido.Cor;
-import joguinhobobo.ajudante.*;
-import joguinhobobo.monstro.BichoPapaoFactory;
-import joguinhobobo.monstro.CurupiraFactory;
-import joguinhobobo.monstro.MonstroService;
+import joguinhobobo.colorido.*;
+import joguinhobobo.entidade.Heroi;
+import joguinhobobo.entidade.ajudante.*;
+import joguinhobobo.item.Cura;
+import joguinhobobo.item.Escudo;
+import joguinhobobo.item.Espada;
+import joguinhobobo.entidade.monstro.*;
 
 import java.io.IOException;
 import java.util.Scanner;

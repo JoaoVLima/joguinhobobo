@@ -1,5 +1,7 @@
 package joguinhobobo;
 
+import joguinhobobo.entidade.Heroi;
+
 import java.io.IOException;
 
 public class Main {

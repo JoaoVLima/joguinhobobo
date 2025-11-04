@@ -1,6 +1,6 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
-import joguinhobobo.Heroi;
+import joguinhobobo.entidade.Heroi;
 
 import java.util.Random;
 

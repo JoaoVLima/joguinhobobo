@@ -1,6 +1,6 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
-import joguinhobobo.Heroi;
+import joguinhobobo.entidade.Heroi;
 
 public class MonstroService {
     private final MonstroFactory factory;

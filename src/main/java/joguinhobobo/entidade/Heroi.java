@@ -1,7 +1,8 @@
-package joguinhobobo;
+package joguinhobobo.entidade;
 
-import joguinhobobo.ajudante.AjudanteService;
-import joguinhobobo.monstro.Monstro;
+import joguinhobobo.entidade.ajudante.AjudanteService;
+import joguinhobobo.item.Item;
+import joguinhobobo.entidade.monstro.Monstro;
 
 import java.util.Scanner;
 

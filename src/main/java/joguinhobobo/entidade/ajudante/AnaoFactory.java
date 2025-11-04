@@ -1,4 +1,4 @@
-package joguinhobobo.ajudante;
+package joguinhobobo.entidade.ajudante;
 
 public class AnaoFactory extends AjudanteFactory {
 

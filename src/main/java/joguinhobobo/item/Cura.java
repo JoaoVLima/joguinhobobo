@@ -1,4 +1,6 @@
-package joguinhobobo;
+package joguinhobobo.item;
+
+import joguinhobobo.entidade.Heroi;
 
 public class Cura extends Item {
     public Cura() {

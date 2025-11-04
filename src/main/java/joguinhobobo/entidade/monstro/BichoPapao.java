@@ -1,6 +1,6 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
-import joguinhobobo.Entidade;
+import joguinhobobo.entidade.Entidade;
 
 public class BichoPapao extends Entidade implements Monstro {
     public BichoPapao(int ataque, int defesa, int vida) {

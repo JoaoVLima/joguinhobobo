@@ -1,4 +1,4 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
 public class CurupiraFactory extends MonstroFactory{
 

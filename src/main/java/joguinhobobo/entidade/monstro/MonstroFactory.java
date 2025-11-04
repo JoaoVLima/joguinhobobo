@@ -1,6 +1,6 @@
-package joguinhobobo.monstro;
+package joguinhobobo.entidade.monstro;
 
-import joguinhobobo.Heroi;
+import joguinhobobo.entidade.Heroi;
 
 public abstract class MonstroFactory {
     public void batalhaFactory(Heroi heroi) throws InterruptedException {
