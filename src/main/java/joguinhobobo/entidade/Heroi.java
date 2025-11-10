@@ -10,6 +10,7 @@ public class Heroi extends Entidade {
     private AjudanteService ajudante;
     private Item mao_esquerda;
     private Item mao_direita;
+    private joguinhobobo.item.Mochila mochila = new joguinhobobo.item.Mochila();
 
     public Heroi(int ataque, int defesa, int vida) {
         super(ataque, defesa, vida);
@@ -23,7 +24,16 @@ public class Heroi extends Entidade {
         return mao_esquerda;
     }
 
-    public void pegarItem(Item item){
+    private void imprimirStatusEItens(String titulo) {
+        System.out.println();
+        System.out.println("=== " + titulo + " ===");
+        System.out.println("Ataque: " + getAtaque() + " | Defesa: " + getDefesa() + " | Vida: " + getVida());
+        mochila.imprimirConteudo();
+        System.out.println("=========================");
+        System.out.println();
+    }
+
+    public void pegarItem(joguinhobobo.item.Item item){
         System.out.println(item.getTipo() + " encontrado: ");
         item.imprimeDescricao();
         System.out.println("Aceita? (s ou n)");
@@ -55,9 +65,18 @@ public class Heroi extends Entidade {
             }else if (option.equals("2")) {
                 this.mao_esquerda = item;
             }
-
         }
+        mochila.adicionar(item);
+        imprimirStatusEItens("Coletou item: " + item.getTipo());
     }
+
+    public joguinhobobo.item.Mochila getMochila() {
+        return mochila;
+    }
+
+
+
+
 
     public void receberAjudante(AjudanteService ajudante) {
         System.out.println(ajudante.getNomeService() + " apareceu: " + ajudante.getDescricaoService() + "Aceita? (s ou n)");
@@ -82,4 +101,9 @@ public class Heroi extends Entidade {
             ajudante = null;
         }
     }
+
+    public void fimDeLuta() { imprimirStatusEItens("Fim da luta"); }
+    public void saiuDoLabirinto() { imprimirStatusEItens("Saiu do labirinto"); }
+    public void morreu() { imprimirStatusEItens("Herói morreu"); }
+
 }

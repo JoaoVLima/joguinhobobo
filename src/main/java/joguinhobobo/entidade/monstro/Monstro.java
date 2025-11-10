@@ -45,9 +45,11 @@ public interface Monstro {
         if (!heroi.estaVivo()) {
             System.out.println("O herói morreu...");
             Thread.sleep(5000);
+            heroi.morreu();
         } else {
             System.out.println("O herói derrotou " + getDescricao());
             Thread.sleep(5000);
+            heroi.fimDeLuta();
         }
     }
 

@@ -47,6 +47,7 @@ public class Mapa {
         limparConsole();
         if (matriz[y][x].getChar() == '=') {
             imprimeMapa();
+            heroi.saiuDoLabirinto();
             System.out.println("FIM DO JOGO, OBRIGADO POR JOGAR!!!");
             return true;
         }
