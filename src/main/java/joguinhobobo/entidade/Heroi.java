@@ -28,6 +28,7 @@ public class Heroi extends Entidade {
         System.out.println();
         System.out.println("=== " + titulo + " ===");
         System.out.println("Ataque: " + getAtaque() + " | Defesa: " + getDefesa() + " | Vida: " + getVida());
+        System.out.println("Mao Esquerda: " + getMao_esquerda() + " | Mao Direita: " + getMao_direita());
         mochila.imprimirConteudo();
         System.out.println("=========================");
         System.out.println();
@@ -93,8 +94,8 @@ public class Heroi extends Entidade {
         }
     }
 
-    public void fimDeLuta() { imprimirStatusEItens(""); }
-    public void saiuDoLabirinto() { imprimirStatusEItens(""); }
-    public void morreu() { imprimirStatusEItens(""); }
+    public void fimDeLuta() { imprimirStatusEItens("Fim da Luta"); }
+    public void saiuDoLabirinto() { imprimirStatusEItens("Saiu do Labirinto"); }
+    public void morreu() { imprimirStatusEItens("Morreu"); }
 
 }
