@@ -10,7 +10,6 @@ public class Escudo extends Item {
     @Override
     public void aplicaBonusHeroi(Heroi heroi) {
         juntar(heroi);
-        heroi.setDefesa(heroi.getDefesa() + getBonus());
     }
 
     @Override
