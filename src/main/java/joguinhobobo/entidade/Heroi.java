@@ -56,18 +56,9 @@ public class Heroi extends Entidade {
             this.mao_direita = item;
         }
         else{
-            System.out.println("Foi sair sem mochila né, dá nisso!");
-            System.out.println("Agora escolhe algum item pra tirar:");
-            System.out.printf("1 - %s%n2 - %s%n3 - Ignorar%n", this.mao_esquerda, this.mao_direita);
-            option = scanner.nextLine();
-            if (option.equals("1")) {
-                this.mao_esquerda = item;
-            }else if (option.equals("2")) {
-                this.mao_esquerda = item;
-            }
+            mochila.adicionar(item);
+            imprimirStatusEItens("Coletou item: " + item.getTipo());
         }
-        mochila.adicionar(item);
-        imprimirStatusEItens("Coletou item: " + item.getTipo());
     }
 
     public joguinhobobo.item.Mochila getMochila() {
