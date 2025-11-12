@@ -3,9 +3,7 @@ package joguinhobobo;
 import joguinhobobo.colorido.*;
 import joguinhobobo.entidade.Heroi;
 import joguinhobobo.entidade.ajudante.*;
-import joguinhobobo.item.Cura;
-import joguinhobobo.item.Escudo;
-import joguinhobobo.item.Espada;
+import joguinhobobo.item.*;
 import joguinhobobo.entidade.monstro.*;
 
 import java.io.IOException;
@@ -91,18 +89,21 @@ public class Mapa {
                 break;
             case 'e': // Espada
                 // recebe buff de ataque
-                Espada espada = new Espada();
-                espada.aplicaBonusHeroi(heroi);
+                EspadaFactory espadaFactory = new EspadaFactory();
+                ItemService espadaItemService = new ItemService(espadaFactory);
+                espadaItemService.juntarService(heroi);
                 break;
             case 'd': // Escudo
                 // recebe buff de defesa
-                Escudo escudo = new Escudo();
-                escudo.aplicaBonusHeroi(heroi);
+                EscudoFactory escudoFactory = new EscudoFactory();
+                ItemService escudoItemService = new ItemService(escudoFactory);
+                escudoItemService.juntarService(heroi);
                 break;
             case 'c': // Cura
                 // recebe buff de vida
-                Cura cura = new Cura();
-                cura.aplicaBonusHeroi(heroi);
+                CuraFactory curaFactory = new CuraFactory();
+                ItemService curaItemService = new ItemService(curaFactory);
+                curaItemService.juntarService(heroi);
                 break;
         }
 
