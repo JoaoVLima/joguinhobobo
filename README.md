@@ -44,7 +44,7 @@ c: Cura
 =: Saida
 ```
 
-itemFactory
-maos do heroi e mochila funcionam juntas
-iterator imprimir em baixo do mapa os status do heroi (realtime)
-Proxy dentro das factories para fazer o log
+- itemFactory
+- Aplicar os items durante a batalha
+- iterator imprimir em baixo do mapa os status do heroi (realtime)
+- Proxy dentro das factories para fazer o log
