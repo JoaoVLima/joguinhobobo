@@ -45,6 +45,6 @@ c: Cura
 ```
 
 itemFactory
-maos do heroi
+maos do heroi e mochila funcionam juntas
 iterator imprimir em baixo do mapa os status do heroi (realtime)
 Proxy dentro das factories para fazer o log
