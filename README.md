@@ -43,3 +43,8 @@ d: Escudo
 c: Cura
 =: Saida
 ```
+
+itemFactory
+maos do heroi
+iterator imprimir em baixo do mapa os status do heroi (realtime)
+Proxy dentro das factories para fazer o log
