@@ -38,7 +38,19 @@ public class Mapa {
     }
 
     public void limparConsole() throws IOException, InterruptedException {
-        new ProcessBuilder("clear").inheritIO().start().waitFor();  // FUNCIONOU, NAO MEXE MAIS (ou faz varios ifs pra varias condicoes de OS, etc)
+        try {
+            String osName = System.getProperty("os.name").toLowerCase();
+
+            if (osName.contains("win")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor(); // nao funciona
+            } else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            } else {
+                System.out.println("Unknown operating system: " + osName);
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean encontraSaida(int x, int y) throws IOException, InterruptedException {
