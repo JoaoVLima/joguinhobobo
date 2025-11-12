@@ -102,8 +102,8 @@ public class Heroi extends Entidade {
         }
     }
 
-    public void fimDeLuta() { imprimirStatusEItens("Fim da luta"); }
-    public void saiuDoLabirinto() { imprimirStatusEItens("Saiu do labirinto"); }
-    public void morreu() { imprimirStatusEItens("Herói morreu"); }
+    public void fimDeLuta() { imprimirStatusEItens(""); }
+    public void saiuDoLabirinto() { imprimirStatusEItens(""); }
+    public void morreu() { imprimirStatusEItens(""); }
 
 }
