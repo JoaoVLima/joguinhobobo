@@ -24,7 +24,7 @@ public class Heroi extends Entidade {
         return mao_esquerda;
     }
 
-    private void imprimirStatusEItens(String titulo) {
+    public void imprimirStatusEItens(String titulo) {
         System.out.println();
         System.out.println("=== " + titulo + " ===");
         System.out.println("Ataque: " + getAtaque() + " | Defesa: " + getDefesa() + " | Vida: " + getVida());
@@ -94,6 +94,7 @@ public class Heroi extends Entidade {
         }
     }
 
+    public void andando() { imprimirStatusEItens("Andando"); }
     public void fimDeLuta() { imprimirStatusEItens("Fim da Luta"); }
     public void saiuDoLabirinto() { imprimirStatusEItens("Saiu do Labirinto"); }
     public void morreu() { imprimirStatusEItens("Morreu"); }

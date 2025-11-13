@@ -10,6 +10,7 @@ public class Main {
         Mapa mapa = new Mapa("mapa.txt", 17, 21);
         mapa.setHeroi(heroi);
         mapa.imprimeMapa();
+        heroi.andando();
         mapa.encontraSaida(1,1);
     }
 }

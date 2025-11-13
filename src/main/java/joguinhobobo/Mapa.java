@@ -53,6 +53,7 @@ public class Mapa {
 
     public boolean encontraSaida(int x, int y) throws IOException, InterruptedException {
         imprimeMapa();
+        heroi.andando();
         Thread.sleep(100);
         limparConsole();
         if (matriz[y][x].getChar() == '=') {
@@ -109,6 +110,7 @@ public class Mapa {
 
         if (!heroi.estaVivo()){
             imprimeMapa();
+            heroi.andando();
             return true;
         }
 
