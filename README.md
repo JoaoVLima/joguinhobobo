@@ -45,6 +45,4 @@ c: Cura
 ```
 
 - Aplicar os items durante a batalha
-- Corrigir print da mochila pra imprimir maos
-- iterator imprimir em baixo do mapa os status do heroi (realtime)
 - Proxy dentro das factories para fazer o log
