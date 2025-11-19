@@ -8,5 +8,5 @@ public interface Ajudante {
 
     String getDescricao();
 
-    void aplicarEfeito(Heroi heroi, Monstro monstro);
+    void aplicarEfeito(Heroi heroi, Monstro monstro) throws InterruptedException;
 }
