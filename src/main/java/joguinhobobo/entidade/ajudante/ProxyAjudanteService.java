@@ -6,7 +6,7 @@ import joguinhobobo.log.Log;
 
 
 public class ProxyAjudanteService extends AjudanteService {
-    
+
     private final AjudanteService real;
 
     public ProxyAjudanteService(AjudanteService real) {

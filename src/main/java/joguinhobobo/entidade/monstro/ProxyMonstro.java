@@ -15,8 +15,16 @@ public class ProxyMonstro implements Monstro {
 
     @Override
     public void batalha(Heroi heroi) throws InterruptedException {
+        
         Log.append("Herói vai batalhar contra " + real.getDescricao());
+
         real.batalha(heroi);
+
+        if (!heroi.estaVivo()) {
+            Log.append("Herói foi derrotado pelo " + real.getDescricao());
+        } else {
+            Log.append("Herói derrotou o " + real.getDescricao());
+        }
     }
 
     @Override
