@@ -79,14 +79,16 @@ public class Mapa {
             case '^': // Duende
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
                 DuendeFactory duendeFactory = new DuendeFactory();
-                AjudanteService duendeAjudanteService = new AjudanteService(duendeFactory);
-                heroi.receberAjudante(duendeAjudanteService);
+                AjudanteService duendeServiceReal = new AjudanteService(duendeFactory);
+                AjudanteService duendeService = new ProxyAjudanteService(duendeServiceReal);
+                heroi.receberAjudante(duendeService);
                 break;
             case '&': // Anão
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
                 AnaoFactory anaoFactory = new AnaoFactory();
-                AjudanteService anaoAjudanteService = new AjudanteService(anaoFactory);
-                heroi.receberAjudante(anaoAjudanteService);
+                AjudanteService anaoServiceReal = new AjudanteService(anaoFactory);
+                AjudanteService anaoService = new ProxyAjudanteService(anaoServiceReal);
+                heroi.receberAjudante(anaoService);
                 break;
             case 'e': // Espada
                 // recebe buff de ataque
