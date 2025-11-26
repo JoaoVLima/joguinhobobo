@@ -5,6 +5,7 @@ import joguinhobobo.item.Item;
 import joguinhobobo.entidade.monstro.Monstro;
 import joguinhobobo.item.Mochila;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Heroi extends Entidade {
@@ -65,9 +66,14 @@ public class Heroi extends Entidade {
     }
 
     public void aplicarItems(){
-        getMao_esquerda();
-        getMao_direita();
-        getMochila();
+        getMao_esquerda().aplicaBonusHeroi(this);
+        getMao_direita().aplicaBonusHeroi(this);
+        Mochila mochila = getMochila();
+        Iterator<Item> iter = mochila.iterator();
+        while(iter.hasNext()){
+            Item item = iter.next();
+            item.aplicaBonusHeroi(this);
+        };
     }
 
     public Mochila getMochila() {

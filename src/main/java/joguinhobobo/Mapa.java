@@ -94,19 +94,19 @@ public class Mapa {
                 // recebe buff de ataque
                 EspadaFactory espadaFactory = new EspadaFactory();
                 ItemService espadaItemService = new ItemService(espadaFactory);
-                espadaItemService.juntarService(heroi);
+                espadaItemService.adicionarAoHeroiService(heroi);
                 break;
             case 'd': // Escudo
                 // recebe buff de defesa
                 EscudoFactory escudoFactory = new EscudoFactory();
                 ItemService escudoItemService = new ItemService(escudoFactory);
-                escudoItemService.juntarService(heroi);
+                escudoItemService.adicionarAoHeroiService(heroi);
                 break;
             case 'c': // Cura
                 // recebe buff de vida
                 CuraFactory curaFactory = new CuraFactory();
                 ItemService curaItemService = new ItemService(curaFactory);
-                curaItemService.juntarService(heroi);
+                curaItemService.adicionarAoHeroiService(heroi);
                 break;
         }
 

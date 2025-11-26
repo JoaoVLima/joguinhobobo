@@ -9,7 +9,7 @@ public class ItemService {
         this.factory = factory;
     }
 
-    public void juntarService(Heroi heroi) throws InterruptedException {
-        this.factory.juntarFactory(heroi);
+    public void adicionarAoHeroiService(Heroi heroi) throws InterruptedException {
+        this.factory.adicionarAoHeroiFactory(heroi);
     }
 }

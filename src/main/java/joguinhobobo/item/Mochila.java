@@ -20,12 +20,14 @@ public class Mochila {
             System.out.println("(vazia)");
             return;
         }
-        Iterator<Item> iter = itens.iterator();
+        Iterator<Item> iter = iterator();
 
         while(iter.hasNext()) {
             Item item = iter.next();
             System.out.println("- " + item.getTipo());
         }
     }
+
+    public Iterator<Item> iterator() { return itens.iterator(); }
 
 }

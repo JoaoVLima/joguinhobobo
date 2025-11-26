@@ -18,7 +18,7 @@ public abstract class Item {
     public abstract void imprimeDescricao();
     public abstract String getTipo();
 
-    public void juntar(Heroi heroi) {
+    public void adicionarAoHeroi(Heroi heroi) {
         heroi.pegarItem(this);
     }
 

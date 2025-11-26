@@ -9,7 +9,7 @@ public class Cura extends Item {
 
     @Override
     public void aplicaBonusHeroi(Heroi heroi) {
-        juntar(heroi);
+        heroi.setVida(heroi.getVida() + getBonus());
     }
     @Override
     public void retiraBonusHeroi(Heroi heroi) {}

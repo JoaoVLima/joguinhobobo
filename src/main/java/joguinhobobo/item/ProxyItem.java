@@ -36,9 +36,9 @@ public class ProxyItem extends Item {
 
 
     @Override
-    public void juntar(Heroi heroi) {
+    public void adicionarAoHeroi(Heroi heroi) {
         Log.append("Herói encontrou um " + real.getTipo());
-        real.juntar(heroi);
+        real.adicionarAoHeroi(heroi);
     }
 }
 
