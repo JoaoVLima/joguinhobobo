@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public class Log {
 
-    private static final String LOG_FILE = "log_jogo.txt";
+    private static final String LOG_FILE = "src/main/resources/log_jogo.txt";
 
     private static final DateTimeFormatter FORMATADOR =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss",

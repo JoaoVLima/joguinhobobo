@@ -44,12 +44,7 @@ c: Cura
 =: Saida
 ```
 
-- Aplicar os items durante a batalha
 - Proxy dentro das factories para fazer o log
 
 - Poderia ter criado uma única factory para cada entidade.
-- Usaram iterador com 'ponteiro'. Quando perguntados, não souberam justificar.
 - Proxy muito acoplado com as classes Monstro, Item e Ajudante.
-
-
-perguntar se tem que implementar o proprio iterator
