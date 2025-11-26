@@ -3,6 +3,7 @@ package joguinhobobo.entidade;
 import joguinhobobo.entidade.ajudante.AjudanteService;
 import joguinhobobo.item.Item;
 import joguinhobobo.entidade.monstro.Monstro;
+import joguinhobobo.item.Mochila;
 
 import java.util.Scanner;
 
@@ -10,10 +11,11 @@ public class Heroi extends Entidade {
     private AjudanteService ajudante;
     private Item mao_esquerda;
     private Item mao_direita;
-    private joguinhobobo.item.Mochila mochila = new joguinhobobo.item.Mochila();
+    private Mochila mochila;
 
     public Heroi(int ataque, int defesa, int vida) {
         super(ataque, defesa, vida);
+        this.mochila = new Mochila();
     }
 
     public Item getMao_direita() {
@@ -29,7 +31,7 @@ public class Heroi extends Entidade {
         System.out.println("=== " + titulo + " ===");
         System.out.println("Ataque: " + getAtaque() + " | Defesa: " + getDefesa() + " | Vida: " + getVida());
         System.out.println("Mao Esquerda: " + getMao_esquerda() + " | Mao Direita: " + getMao_direita());
-        mochila.imprimirConteudo();
+        getMochila().imprimirConteudo();
         System.out.println("=========================");
         System.out.println();
     }
@@ -62,11 +64,15 @@ public class Heroi extends Entidade {
         }
     }
 
-    public joguinhobobo.item.Mochila getMochila() {
-        return mochila;
+    public void aplicarItems(){
+        getMao_esquerda();
+        getMao_direita();
+        getMochila();
     }
 
-
+    public Mochila getMochila() {
+        return mochila;
+    }
 
 
 
