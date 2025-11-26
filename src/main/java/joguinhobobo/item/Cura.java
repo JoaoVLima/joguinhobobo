@@ -9,6 +9,7 @@ public class Cura extends Item {
 
     @Override
     public void aplicaBonusHeroi(Heroi heroi) {
+        System.out.println("Aplicando item de Cura");
         heroi.setVida(heroi.getVida() + getBonus());
     }
     @Override

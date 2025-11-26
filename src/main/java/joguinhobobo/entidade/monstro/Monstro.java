@@ -7,6 +7,7 @@ import java.util.Random;
 public interface Monstro {
     default void batalha(Heroi heroi) throws InterruptedException {
         heroi.aplicarAjudante(this);
+        heroi.aplicarItems();
         System.out.println("Iniciando batalha contra " + getDescricao());
         aplicarHabilidade();
         Random random = new Random(); // Create a Random object
