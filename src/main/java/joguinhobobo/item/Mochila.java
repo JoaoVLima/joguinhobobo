@@ -11,6 +11,7 @@ public class Mochila {
 
     public void adicionar(Item item) { itens.add(item); }
     public boolean remover(Item item) { return itens.remove(item); }
+    public void limpar() { itens.clear(); }
     public int tamanho() { return itens.size(); }
     public boolean isVazia() { return itens.isEmpty(); }
 

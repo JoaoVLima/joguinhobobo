@@ -27,12 +27,31 @@ public class Heroi extends Entidade {
         return mao_esquerda;
     }
 
+    public AjudanteService getAjudante() {
+        return ajudante;
+    }
+
+    public void setMao_direita(Item mao_direita) {
+        this.mao_direita =  mao_direita;
+    }
+
+    public void setMao_esquerda(Item mao_esquerda) {
+        this.mao_esquerda =  mao_esquerda;
+    }
+
     public void imprimirStatusEItens(String titulo) {
         System.out.println();
         System.out.println("=== " + titulo + " ===");
         System.out.println("Ataque: " + getAtaque() + " | Defesa: " + getDefesa() + " | Vida: " + getVida());
         System.out.println("Mao Esquerda: " + getMao_esquerda() + " | Mao Direita: " + getMao_direita());
         getMochila().imprimirConteudo();
+        System.out.println("=== Ajudante ===");
+        AjudanteService ajudante = getAjudante();
+        if(ajudante != null) {
+            System.out.println("- " + ajudante.getNomeService());
+        }else{
+            System.out.println("(vazio)");
+        }
         System.out.println("=========================");
         System.out.println();
     }
@@ -54,10 +73,10 @@ public class Heroi extends Entidade {
         }
 
         if (this.mao_esquerda == null) {
-            this.mao_esquerda = item;
+            setMao_esquerda(item);
         }
         else if (this.mao_direita == null) {
-            this.mao_direita = item;
+            setMao_direita(item);
         }
         else{
             mochila.adicionar(item);
@@ -74,6 +93,9 @@ public class Heroi extends Entidade {
             Item item = iter.next();
             item.aplicaBonusHeroi(this);
         };
+        setMao_esquerda(null);
+        setMao_direita(null);
+        mochila.limpar();
     }
 
     public Mochila getMochila() {
