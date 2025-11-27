@@ -4,8 +4,7 @@ import joguinhobobo.entidade.Heroi;
 
 public abstract class MonstroFactory {
     public void batalhaFactory(Heroi heroi) throws InterruptedException {
-        Monstro monstroReal = createMonstro();
-        Monstro monstro = new ProxyMonstro(monstroReal);
+        Monstro monstro = createMonstro();
         monstro.batalha(heroi);
     }
 

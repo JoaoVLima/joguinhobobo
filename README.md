@@ -44,7 +44,7 @@ c: Cura
 =: Saida
 ```
 
-- Proxy dentro das factories para fazer o log
 
-- Poderia ter criado uma única factory para cada entidade.
 - Proxy muito acoplado com as classes Monstro, Item e Ajudante.
+
+- Proxy dentro das factories para fazer o log

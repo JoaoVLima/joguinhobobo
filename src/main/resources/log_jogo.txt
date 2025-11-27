@@ -51,3 +51,7 @@
 26/11/2025 20:55:42 Herói se aproximou de um Duende
 26/11/2025 20:55:42 Herói vai batalhar contra Bicho Papão
 26/11/2025 20:55:42 Herói se aproximou de um Duende
+26/11/2025 21:06:47 Herói encontrou um Espada
+26/11/2025 21:06:49 Herói encontrou um Escudo
+26/11/2025 21:06:50 Herói encontrou um Cura
+26/11/2025 21:06:56 Herói encontrou um Escudo

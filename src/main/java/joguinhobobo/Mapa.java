@@ -14,12 +14,26 @@ public class Mapa {
     private final int numeroLinhas;
     private final int numeroColunas;
     private Heroi heroi;
+    private BichoPapaoFactory bichoPapaoFactory;
+    private CurupiraFactory curupiraFactory;
+    private DuendeFactory duendeFactory;
+    private AnaoFactory anaoFactory;
+    private EspadaFactory espadaFactory;
+    private EscudoFactory escudoFactory;
+    private CuraFactory curaFactory;
 
     public Mapa(String nomeArquivo, int linhas, int colunas) {
         this.numeroLinhas = linhas;
         this.numeroColunas = colunas;
         alocaMatriz();
         lerArquivo(nomeArquivo);
+        this.bichoPapaoFactory = new BichoPapaoFactory();
+        this.curupiraFactory = new CurupiraFactory();
+        this.duendeFactory = new DuendeFactory();
+        this.anaoFactory = new AnaoFactory();
+        this.espadaFactory = new EspadaFactory();
+        this.escudoFactory = new EscudoFactory();
+        this.curaFactory = new CuraFactory();
     }
 
     public void setHeroi(Heroi heroi){
@@ -65,47 +79,38 @@ public class Mapa {
 
         switch (matriz[y][x].getChar()) {
             case '?': // Bicho Papão
-                BichoPapaoFactory bichoPapaoFactory = new BichoPapaoFactory();
-                MonstroService bichoPapaoMonstroService = new MonstroService(bichoPapaoFactory);
+                MonstroService bichoPapaoMonstroService = new MonstroService(this.bichoPapaoFactory);
                 bichoPapaoMonstroService.batalhaService(heroi);
                 break;
                 // batalha
             case '*': // Curupira
-                CurupiraFactory curupiraFactory = new CurupiraFactory();
-                MonstroService curupiraMonstroService = new MonstroService(curupiraFactory);
+                MonstroService curupiraMonstroService = new MonstroService(this.curupiraFactory);
                 curupiraMonstroService.batalhaService(heroi);
                 break;
                 // batalha
             case '^': // Duende
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
-                DuendeFactory duendeFactory = new DuendeFactory();
-                AjudanteService duendeServiceReal = new AjudanteService(duendeFactory);
-                AjudanteService duendeService = new ProxyAjudanteService(duendeServiceReal);
+                AjudanteService duendeService = new AjudanteService(this.duendeFactory);
                 heroi.receberAjudante(duendeService);
                 break;
             case '&': // Anão
                 // recebe a oportunidade de 1 ajuda do duende (buff) e (debuff) do bicho
-                AnaoFactory anaoFactory = new AnaoFactory();
-                AjudanteService anaoServiceReal = new AjudanteService(anaoFactory);
-                AjudanteService anaoService = new ProxyAjudanteService(anaoServiceReal);
+                AjudanteService anaoService = new AjudanteService(this.anaoFactory);
                 heroi.receberAjudante(anaoService);
                 break;
             case 'e': // Espada
                 // recebe buff de ataque
-                EspadaFactory espadaFactory = new EspadaFactory();
-                ItemService espadaItemService = new ItemService(espadaFactory);
+                ItemService espadaItemService = new ItemService(this.espadaFactory);
                 espadaItemService.adicionarAoHeroiService(heroi);
                 break;
             case 'd': // Escudo
                 // recebe buff de defesa
-                EscudoFactory escudoFactory = new EscudoFactory();
-                ItemService escudoItemService = new ItemService(escudoFactory);
+                ItemService escudoItemService = new ItemService(this.escudoFactory);
                 escudoItemService.adicionarAoHeroiService(heroi);
                 break;
             case 'c': // Cura
                 // recebe buff de vida
-                CuraFactory curaFactory = new CuraFactory();
-                ItemService curaItemService = new ItemService(curaFactory);
+                ItemService curaItemService = new ItemService(this.curaFactory);
                 curaItemService.adicionarAoHeroiService(heroi);
                 break;
         }
