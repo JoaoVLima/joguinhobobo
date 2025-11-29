@@ -2,6 +2,7 @@ package joguinhobobo.entidade.ajudante;
 
 import joguinhobobo.entidade.Heroi;
 import joguinhobobo.entidade.monstro.Monstro;
+import joguinhobobo.log.ProxyLog;
 
 public abstract class AjudanteFactory {
     public String getNomeFactory(){
@@ -16,6 +17,7 @@ public abstract class AjudanteFactory {
 
     public void aplicarEfeitoFactory(Heroi heroi, Monstro monstro) throws InterruptedException {
         Ajudante ajudante = createAjudante();
+        ProxyLog.append(String.format("%s está ajudando o heroi!", ajudante.getNome()));
         ajudante.aplicarEfeito(heroi, monstro);
     }
 

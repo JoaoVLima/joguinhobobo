@@ -43,7 +43,3 @@ d: Escudo
 c: Cura
 =: Saida
 ```
-
-
-- rescrever iterator
-- colocar proxy dentro do servico

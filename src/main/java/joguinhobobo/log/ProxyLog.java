@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-public class Log {
+public class ProxyLog {
 
-    private static final String LOG_FILE = "src/main/resources/log_jogo.txt";
+    private static final String LOG_FILE = "src/main/resources/log.txt";
 
     private static final DateTimeFormatter FORMATADOR =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss",

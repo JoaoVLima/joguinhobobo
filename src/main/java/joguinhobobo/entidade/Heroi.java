@@ -86,8 +86,10 @@ public class Heroi extends Entidade {
     }
 
     public void aplicarItems(){
-        getMao_esquerda().aplicaBonusHeroi(this);
-        getMao_direita().aplicaBonusHeroi(this);
+        Item mao_esquerda = getMao_esquerda();
+        if (mao_esquerda!=null) mao_esquerda.aplicaBonusHeroi(this);
+        Item mao_direita = getMao_direita();
+        if (mao_direita!=null) mao_direita.aplicaBonusHeroi(this);
         Mochila mochila = getMochila();
         Iterador iter = mochila.iterador();
         while(iter.hasNext()){
