@@ -45,6 +45,5 @@ c: Cura
 ```
 
 
-- Proxy muito acoplado com as classes Monstro, Item e Ajudante.
-
-- Proxy dentro das factories para fazer o log
+- rescrever iterator
+- colocar proxy dentro do servico
