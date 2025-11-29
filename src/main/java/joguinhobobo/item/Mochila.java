@@ -3,7 +3,6 @@ package joguinhobobo.item;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class Mochila {
 
@@ -21,7 +20,7 @@ public class Mochila {
             System.out.println("(vazia)");
             return;
         }
-        Iterator<Item> iter = iterator();
+        Iterador iter = new Iterador(itens);
 
         while(iter.hasNext()) {
             Item item = iter.next();
@@ -29,6 +28,6 @@ public class Mochila {
         }
     }
 
-    public Iterator<Item> iterator() { return itens.iterator(); }
+    public Iterador iterador() { return new Iterador(itens); }
 
 }

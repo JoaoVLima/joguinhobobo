@@ -3,6 +3,7 @@ package joguinhobobo.entidade;
 import joguinhobobo.entidade.ajudante.AjudanteService;
 import joguinhobobo.item.Item;
 import joguinhobobo.entidade.monstro.Monstro;
+import joguinhobobo.item.Iterador;
 import joguinhobobo.item.Mochila;
 
 import java.util.Iterator;
@@ -88,7 +89,7 @@ public class Heroi extends Entidade {
         getMao_esquerda().aplicaBonusHeroi(this);
         getMao_direita().aplicaBonusHeroi(this);
         Mochila mochila = getMochila();
-        Iterator<Item> iter = mochila.iterator();
+        Iterador iter = mochila.iterador();
         while(iter.hasNext()){
             Item item = iter.next();
             item.aplicaBonusHeroi(this);
